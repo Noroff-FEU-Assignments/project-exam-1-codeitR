@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dreams&ideas - Home Page</title>
+    <meta name="description" content="This is the blog post of an aspiring front-end developer">
+    <script type="module" src="./scripts/index.js"></script>
+    <script defer src="./scripts/pages/home.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="designSystem/home.css"> -->
+
+</head>
+
+<body>
+    <header>
+        <nav class="container navbar">
+
+            <div class="text_logo">dreams<span>&</span>ideas</div>
+            <!-- logo link to index.html ??-->
+            <div class="nav-items">
+                <div class="options hidden">
+                    <a href="index.html" class="underline">Home</a>
+                    <a href="/blogs/index.html">Blogs</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/contact/index.html">Contact</a>
+                </div>
+                <div class="navbar__icons">
+                    <i class="bi bi-list"></i>
+                    <i class="bi bi-x hide"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero_left">
+                <h1>We make websites</h1>
+                <p>your digital dreams & ideas into reality, stunning art of work with lasting impression.</p>
+                <p><span class="dot"></span> Website shouldn't cost fortune. </p>
+                <p><span class="dot"></span> We will be with you in your entire journey. </p>
+                <button class="letsStartBtn">Lets Start..</button>
+            </div>
+            <img class="hero-image" src="assets/five.jpg" alt="">
+        </section>
+        <section class="latest-post">
+            <h1>The Latest Posts</h1>
+            <div class="grid-post" id="latest-post"></div>
+        </section>
+        <section></section>
+    </main>
+    <footer></footer>
+</body>
+
+<script src="js/pages/home.js"></script>
+
+</html>

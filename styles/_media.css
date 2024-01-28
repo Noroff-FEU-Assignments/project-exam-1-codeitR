@@ -1,0 +1,65 @@
+/* hero-section on index page  */
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1680px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .section__hero {
+        padding-top: 4px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 980px) {
+    .container {
+        max-width: 890px;
+        padding: 25px 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .options {
+        background-color: var(--bg-color-main);
+        position: absolute;
+        opacity: 100%;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .options a {
+        color: var(--text-color-1);
+    }
+
+    .navbar__icons {
+        display: block !important;
+        font-size: 30px;
+    }
+
+    .hidden {
+        z-index: -1;
+        opacity: 0;
+    }
+}
