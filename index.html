@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dreams&ideas - Home Page</title>
-    <meta name="description" content="This is the blog post of an aspiring front-end developer">
-    <script type="module" src="./scripts/index.js"></script>
-    <script defer src="./scripts/pages/home.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Think - Home Page</title>
+    <meta name="description" content="">
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="js/pages/home.js"></script>
+    <link rel="stylesheet" href="designSystem/style.css">
     <!-- <link rel="stylesheet" href="designSystem/home.css"> -->
 
 </head>
@@ -34,25 +34,69 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section class="container hero">
             <div class="hero_left">
                 <h1>We make websites</h1>
                 <p>your digital dreams & ideas into reality, stunning art of work with lasting impression.</p>
                 <p><span class="dot"></span> Website shouldn't cost fortune. </p>
                 <p><span class="dot"></span> We will be with you in your entire journey. </p>
-                <button class="letsStartBtn">Lets Start..</button>
+                <button class="btn letsStartBtn">Lets Start..</button>
             </div>
             <img class="hero-image" src="assets/five.jpg" alt="">
         </section>
-        <section class="latest-post">
+        <section class="container latest-post">
             <h1>The Latest Posts</h1>
-            <div class="grid-post" id="latest-post"></div>
+            <div class="carousel">
+                <button id="prev">
+                    <i class="bi bi-arrow-left-square"></i>
+                </button>
+                <div class="grid-post" id="latest-post"></div>
+                <button id="next">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </div>
         </section>
-        <section></section>
+        <section class="container latest-post most_read_post">
+            <h1>The Most Read Post</h1>
+            <div class="carousel">
+                <button id="most_read_post_prev">
+                    <h1>prev</h1>
+                </button>
+                <div class="grid-post" id="most_read"></div>
+                <button id="most_read_post_next">
+                    <h1>next</h1>
+                </button>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer container">
+            <div class="footer__navbar">
+                <div class="text_logo">dreams<span>&</span>ideas</div>
+                <div class="nav-items">
+                    <a href="index.html" class="underline">Home</a>
+                    <a href="/blogs/index.html">Blogs</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/contact/index.html">Contact</a>
+                </div>
+            </div>
+            <address>Bjørekollen 100, <br>Oslo<br>
+                +47 9867000000
+            </address>
+            <hr>
+            <div class="socials-copyright">
+                <div class="socials">
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                </div>
+                <div class="copyright">
+                    © 2024@ramesh
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
 </body>
-
-<script src="js/pages/home.js"></script>
 
 </html>

@@ -1,0 +1,35 @@
+/* work on all the ebuttons on the page */
+.bi-arrow-left-square,
+.bi-arrow-right-square {
+    color: var(--text-color-b);
+    font-size: 1.6rem;
+    background-color: var(--text-color-y);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.bi-arrow-left-square:hover,
+.bi-arrow-right-square:hover {
+    color: var(--text-color-b);
+    background-color: var(--text-color-y);
+    opacity: 0.4;
+}
+
+.btn {
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    margin-top: 1rem;
+    border-radius: 4px;
+    border: 2px solid #ffc84a;
+    background-color: var(--bg-color-main);
+    cursor: pointer;
+}
+
+.letsStartBtn:hover {
+    border: 2px solid var(--text-color-b);
+    color: #ffc84a;
+    transform: 0.5ms;
+}
