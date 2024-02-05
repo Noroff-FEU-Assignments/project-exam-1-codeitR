@@ -30,12 +30,16 @@
     display: none;
 }
 
-.text_logo {
+.text_logo>a {
     font-size: 1.7rem;
     color: var(--text-color-p);
 }
 
-.text_logo>span {
+.text_logo>a:hover {
+    text-decoration: none;
+}
+
+.text_logo>a>span {
     color: var(--text-color-b);
 }
 

@@ -33,3 +33,11 @@
     color: #ffc84a;
     transform: 0.5ms;
 }
+
+.load-more-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: auto;
+    cursor: pointer;
+}

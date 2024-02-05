@@ -16,7 +16,7 @@
 .hero h1 {
     color: var(--text-color-1);
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 38px;
 }
 
 .hero p {
@@ -85,6 +85,8 @@
 
 .post img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .most_read_post {

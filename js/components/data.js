@@ -1,4 +1,33 @@
+const baseURL = "https://wordpress.ramesh.no/wp-json/wp/v2/";
+const endpoint = "posts?_embed";
+const fetchedURL = baseURL + endpoint;
 
+export const fetchPostData = async () => {
+    return await fetch(fetchedURL)
+        .then((res) => res.json())
+        .then((res) => {
+            return res.map((post) => {
+                if (
+                    post._embedded &&
+                    post._embedded["wp:featuredmedia"] &&
+                    post._embedded["wp:featuredmedia"][0]
+                ) {
+                    return {
+                        ...post,
+                        title: post.title.rendered,
+                        excerpt: post.excerpt.rendered,
+                        image: post._embedded["wp:featuredmedia"][0].source_url,
+                    };
+                }
+                return {
+                    ...post,
+                    title: post.title.rendered,
+                    excerpt: post.excerpt.rendered,
+                    image: "",
+                };
+            });
+        });
+};
 export const fetchAnotherData = () => {
     return [
         {
