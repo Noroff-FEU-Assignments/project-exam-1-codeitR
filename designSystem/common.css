@@ -70,3 +70,45 @@ address {
     flex-direction: column;
     align-items: center;
 }
+
+.load-more-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: auto;
+    cursor: pointer;
+    width: 178px
+}
+
+
+[class *="wp-image-"] {
+    width: 100%;
+    object-fit: contain;
+    /* cropping priority */
+    object-position: center;
+    height: 400px;
+    cursor: pointer;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FF3D00;
+    border-bottom-color: #d8c623;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
