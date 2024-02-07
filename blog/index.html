@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../plugins/lightbox/simple-lightbox.min.css">
+    <script type="module" src="../plugins/lightbox/simple-lightbox.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Think - Home Page</title>
     <meta name="description" content="">
-    <script type="module" src="../js/index.js"></script>
     <link rel="stylesheet" href="../designSystem/style.css">
     <!-- <link rel="stylesheet" href="designSystem/home.css"> -->
-
+    <link rel="stylesheet" href="./blog.style.css">
+    <script type="module" src="../js/pages/blog.js"></script>
 </head>
 
 <body>
@@ -31,13 +33,16 @@
             </div>
         </nav>
     </header>
+    <main class="container singular-blog" id="print_blog_post">
+        <span class="loader"></span>
+    </main>
 
-    <footer>
+    <footer class="blogs_footer">
         <div class="footer container">
             <div class="footer__navbar">
                 <div class="text_logo">dreams<span>&</span>ideas</div>
                 <div class="nav-items">
-                    <a href="index.html" class="underline">Home</a>
+                    <a href="/index.html" class="underline">Home</a>
                     <a href="/blogs/index.html">Blogs</a>
                     <a href="/about/index.html">About</a>
                     <a href="/contact/index.html">Contact</a>

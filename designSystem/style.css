@@ -6,6 +6,7 @@
 @import url('/designSystem/media.css');
 @import url("/designSystem/utils.css");
 @import url("/designSystem/common.css");
+@import url(/designSystem/main.css);
 
 body {
     font-family: 'Poppins', sans-serif;

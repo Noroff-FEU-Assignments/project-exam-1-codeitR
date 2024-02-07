@@ -9,7 +9,6 @@
     <script type="module" src="../js/index.js"></script>
     <script type="module" src="../js/pages/blogs.js"></script>
     <script type="module" src="../js/api/index.js"></script>
-
     <link rel="stylesheet" href="../designSystem/style.css">
     <!-- <link rel="stylesheet" href="designSystem/home.css"> -->
 
@@ -34,17 +33,18 @@
             </div>
         </nav>
     </header>
-
     <main>
         <section class="container latest-post most_read_post">
             <h2>This is Our Daily Blogs</h2>
-            <div class="grid-post" id="card_display"></div>
-            <button class="load-more-btn" id="load_more_btn">Load more</button>
-            <button style="display: none;" id="go_up">Go Up</button>
+            <div class="grid-post" id="card_display">
+                <span class="loader"></span>
+            </div>
+            <button class="load-more-btn btn" id="load_more_btn">Load More Blogs..</button>
+            <button style="display: none;" class="btn" id="go_up">Go Up</button>
         </section>
     </main>
 
-    <footer>
+    <footer class="blogs_footer">
         <div class="footer container">
             <div class="footer__navbar">
                 <div class="text_logo">dreams<span>&</span>ideas</div>

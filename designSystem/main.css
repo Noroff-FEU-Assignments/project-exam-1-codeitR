@@ -1,0 +1,35 @@
+.post_image {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    /* object-position: center; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog_body {
+    margin: 40px auto;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.blog_body {
+    margin: 40px auto;
+}
+
+
+.attribute_section {
+    display: flex;
+    align-items: center;
+}
+
+.xxm_post_image {
+    margin-right: 8px;
+    width: 5%;
+    height: 5%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid pink;
+}

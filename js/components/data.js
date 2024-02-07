@@ -1,9 +1,9 @@
 const baseURL = "https://wordpress.ramesh.no/wp-json/wp/v2/";
-const endpoint = "posts?_embed";
+const endpoint = "posts";
 const fetchedURL = baseURL + endpoint;
 
 export const fetchPostData = async () => {
-    return await fetch(fetchedURL)
+    return await fetch(`${fetchedURL}?_embed&per_page=100`)
         .then((res) => res.json())
         .then((res) => {
             return res.map((post) => {
@@ -28,11 +28,11 @@ export const fetchPostData = async () => {
             });
         });
 };
+
 export const fetchAnotherData = () => {
     return [
         {
-            image:
-                "../../assets/codeone.jpg",
+            image: "../../assets/codeone.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -40,8 +40,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/relaxcode.jpg",
+            image: "../../assets/relaxcode.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -73,8 +72,7 @@ export const fetchAnotherData = () => {
             author: "Leo",
         },
         {
-            image:
-                "../../assets/seven.jpg",
+            image: "../../assets/seven.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -82,8 +80,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/seven.jpg",
+            image: "../../assets/seven.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -91,8 +88,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/seven.jpg",
+            image: "../../assets/seven.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -100,8 +96,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/relaxcode.jpg",
+            image: "../../assets/relaxcode.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -109,8 +104,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/relaxcode.jpg",
+            image: "../../assets/relaxcode.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -118,8 +112,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/relaxcode.jpg",
+            image: "../../assets/relaxcode.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -127,8 +120,7 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
         {
-            image:
-                "../../assets/relaxcode.jpg",
+            image: "../../assets/relaxcode.jpg",
             date: "Tuesday, 11pm, EST 2024.01.24,",
             title:
                 "This is going to the box heading we will have same size like top.",
@@ -136,4 +128,31 @@ export const fetchAnotherData = () => {
             author: "little soldier",
         },
     ];
+};
+
+export const fetchOnePost = async (id) => {
+    return await fetch(`${fetchedURL}/${id}?_embed`)
+        .then((res) => res.json())
+        .then((post) => {
+            if (
+                post._embedded &&
+                post._embedded["wp:featuredmedia"] &&
+                post._embedded["wp:featuredmedia"][0]
+            ) {
+                return {
+                    ...post,
+                    title: post.title.rendered,
+                    excerpt: post.excerpt.rendered,
+                    image: post._embedded["wp:featuredmedia"][0].source_url,
+                    author: post._embedded.author[0].name,
+                };
+            }
+            return {
+                ...post,
+                title: post.title.rendered,
+                excerpt: post.excerpt.rendered,
+                image: "",
+                author: post._embedded.author[0].name || "",
+            };
+        });
 };

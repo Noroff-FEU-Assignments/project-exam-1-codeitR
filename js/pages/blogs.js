@@ -5,7 +5,7 @@ const load_more_btn = document.getElementById("load_more_btn");
 const go_up = document.getElementById("go_up")
 
 let start = 0;
-let end = 3;
+let end = 6;
 let data = [];
 
 let getData = async () => {
@@ -15,8 +15,6 @@ let getData = async () => {
 }
 getData();
 
-
-let cardsToDisplayAtATime = 3;
 
 load_more_btn.addEventListener("click", () => {
     start = end;

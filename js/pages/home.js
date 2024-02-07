@@ -19,7 +19,8 @@ const firstFetch = async () => {
     data = await fetchPostData();
 
     console.log(data);
-    printData();
+    // run this so it can do the setup for the first time for buttons and cards setup
+    handleResize();
 };
 // we use this function to change position/ slide numbers of the carousel
 const handleClick = (x, y) => {
@@ -31,7 +32,7 @@ const handleClick = (x, y) => {
 // this is used to fetch and print the data
 const printData = () => {
     latestPost.innerHTML = printCards(data.slice(start, end));
-    mostRead.innerHTML = printCards(data.slice(start, end));
+    mostRead.innerHTML = printCards(data.slice(4, 7, 15));
 };
 
 // this is gonna print the cards for the first time when the user comes to our app
@@ -42,7 +43,13 @@ carouselNext.addEventListener("click", () => {
     // if end is equal to length of data, as an example, total cards is 12 and our ending position is 12,
     // which means that all the slides are shown to the user, so we need to stop the carousel from moving
     if (data.length <= end) {
-        handleClick(0, 3);
+        if (window.innerWidth <= 980) {
+            handleClick(0, 2);
+        } else if (window.innerWidth <= 799) {
+            return;
+        } else {
+            handleClick(0, 3);
+        }
     } else {
         // 2 means that display 2 cards at a time per slide
         handleClick(start + cardsToDisplayAtATime, end + cardsToDisplayAtATime);
@@ -56,19 +63,36 @@ carouselPrev.addEventListener("click", () => {
         handleClick(start - cardsToDisplayAtATime, end - cardsToDisplayAtATime);
         printData();
     } else {
-        handleClick(0, 3);
+        if (window.innerWidth <= 980) {
+            handleClick(0, 2);
+        } else if (window.innerWidth <= 799) {
+            return;
+        } else {
+            handleClick(0, 3);
+        }
     }
 });
 
 const handleResize = () => {
-    if (window.innerWidth <= 750) {
+    if (window.innerWidth <= 799) {
+        start = 0;
+        end = data.length;
         console.log("mobile", window.innerWidth);
         prev.style.display = "none";
         next.style.display = "none";
+        printData();
+    } else if (window.innerWidth <= 980) {
+        start = 0;
+        end = 2;
+        cardsToDisplayAtATime = 2;
+        printData();
     } else {
         console.log("desktop", window.innerWidth);
         prev.style.display = "flex";
         next.style.display = "flex";
+        start = 0;
+        end = 3;
+        printData();
     }
 };
 
