@@ -30,9 +30,19 @@
     display: none;
 }
 
+._text_logo {
+    font-size: 1.7rem;
+    color: var(--text-color-p);
+
+}
+
 .text_logo>a {
     font-size: 1.7rem;
     color: var(--text-color-p);
+}
+
+._text_logo>span {
+    color: var(--text-color-b);
 }
 
 .text_logo>a:hover {
