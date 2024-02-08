@@ -1,5 +1,6 @@
 import { fetchOnePost } from "../components/data.js";
 import { blogTemplate } from "../components/printCards.js";
+import { enableLightBox } from "../components/lightbox.js";
 const print_blog = document.getElementById("print_blog_post");
 let data = {};
 
@@ -11,6 +12,7 @@ const fetchForFirstTime = async () => {
     data = await fetchOnePost(query);
     // console.log(data);
     print_blog.innerHTML = blogTemplate(data);
+    enableLightBox()
 };
 
 fetchForFirstTime();

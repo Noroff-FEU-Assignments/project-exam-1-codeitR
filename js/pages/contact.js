@@ -1,19 +1,26 @@
-export function validateForm() {
+const form = document.getElementById("form");
+form.addEventListener("submit", validateForm);
+
+export function validateForm(e) {
+    e.preventDefault();
+
     let name = document.getElementById("name");
     let email = document.getElementById("email");
     let subject = document.getElementById("subject");
     let message = document.getElementById("message");
     let formErrorMsg = document.getElementsByClassName("error-form");
 
-    let emailRegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let emailRegExp =
+        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let emailTestResult = emailRegExp.test(email.value);
 
     if (name.value.trim() == "") {
         name.classList.add("invalid");
-        formErrorMsg[0].innerHTML = "Please enter your name";
-    } else if (name.value.length < 5) {
+        formErrorMsg[0].innerHTML = "<h1>Please enter your name</h1>";
+        console.log(formErrorMsg);
+    } else if (name.value.length < 3) {
         name.classList.add("invalid");
-        formErrorMsg[0].innerHTML = "Please enter your name, min 5 characters.";
+        formErrorMsg[0].innerHTML = "Please enter your name, min 3 characters.";
     } else {
         name.classList.remove("invalid");
         name.classList.add("valid");
@@ -30,15 +37,14 @@ export function validateForm() {
         email.classList.remove("invalid");
         email.classList.add("valid");
         formErrorMsg[1].innerHTML = "";
-
     }
 
     if (subject.value.trim() == "") {
         subject.classList.add("invalid");
         formErrorMsg[2].innerHTML = "Please enter subject of your message.";
-    } else if (subject.value.length < 15) {
+    } else if (subject.value.length < 5) {
         subject.classList.add("invalid");
-        formErrorMsg[2].innerHTML = "Please enter subject, min 15 characters.";
+        formErrorMsg[2].innerHTML = "Please enter subject, min 5 characters.";
     } else {
         subject.classList.remove("invalid");
         subject.classList.add("valid");
@@ -48,11 +54,11 @@ export function validateForm() {
     if (message.value.trim() == "") {
         message.classList.add("invalid");
         formErrorMsg[3].innerHTML = "Please write your message.";
-    } else if (message.value.length < 25) {
+    } else if (message.value.length < 10) {
         message.classList.add("invalid");
         formErrorMsg[3].innerHTML = "Please write your message, min 25 characters.";
     } else {
-        message.classList.remove("invalid")
+        message.classList.remove("invalid");
         message.classList.add("valid");
         formErrorMsg[3].innerHTML = "";
     }

@@ -110,7 +110,7 @@ address {
     align-items: center;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    margin: auto;
+    margin: 300px;
 }
 
 @keyframes rotation {

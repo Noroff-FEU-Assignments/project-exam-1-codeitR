@@ -177,33 +177,3 @@ button:hover {
     opacity: 0.8;
 
 }
-
-/**
-* ! media Queries are here
-**/
-
-@media(max-width:900px) {
-    .contant_container {
-        display: grid;
-
-    }
-
-    #form,
-    .content {
-        width: 100%;
-    }
-
-    .btn {
-        flex-direction: column;
-    }
-
-    .image {
-        height: 70vh;
-    }
-}
-
-@media(max-width:450px) {
-    #form {
-        padding: 20px;
-    }
-}

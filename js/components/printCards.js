@@ -37,8 +37,6 @@ export const blogTemplate = (data) => {
     <div class="content">
       ${data.content.rendered}
     </div>
-    
-  
   </div>
   `;
 };
