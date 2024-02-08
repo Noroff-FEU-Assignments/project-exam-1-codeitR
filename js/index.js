@@ -7,8 +7,9 @@
 // // trigger animations
 
 // example()
+// import { validateForm } from './pages/contact.js'
+// validateForm()
 
 import { setupMenuToggle } from '../js/components/toggle.js'
 setupMenuToggle()
-import { validateForm } from './pages/contact.js'
-validateForm()
+

@@ -18,9 +18,9 @@ export function validateForm(e) {
         name.classList.add("invalid");
         formErrorMsg[0].innerHTML = "<h1>Please enter your name</h1>";
         console.log(formErrorMsg);
-    } else if (name.value.length < 3) {
+    } else if (name.value.length < 5) {
         name.classList.add("invalid");
-        formErrorMsg[0].innerHTML = "Please enter your name, min 3 characters.";
+        formErrorMsg[0].innerHTML = "Please enter your name, min 5 characters.";
     } else {
         name.classList.remove("invalid");
         name.classList.add("valid");
@@ -42,9 +42,9 @@ export function validateForm(e) {
     if (subject.value.trim() == "") {
         subject.classList.add("invalid");
         formErrorMsg[2].innerHTML = "Please enter subject of your message.";
-    } else if (subject.value.length < 5) {
+    } else if (subject.value.length < 15) {
         subject.classList.add("invalid");
-        formErrorMsg[2].innerHTML = "Please enter subject, min 5 characters.";
+        formErrorMsg[2].innerHTML = "Please enter subject, min 15 characters.";
     } else {
         subject.classList.remove("invalid");
         subject.classList.add("valid");
@@ -54,7 +54,7 @@ export function validateForm(e) {
     if (message.value.trim() == "") {
         message.classList.add("invalid");
         formErrorMsg[3].innerHTML = "Please write your message.";
-    } else if (message.value.length < 10) {
+    } else if (message.value.length < 25) {
         message.classList.add("invalid");
         formErrorMsg[3].innerHTML = "Please write your message, min 25 characters.";
     } else {
