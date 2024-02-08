@@ -117,9 +117,10 @@ address {
     border-bottom-color: #d8c623;
     border-radius: 50%;
     align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    margin: 400px;
+    margin: 500px;
 }
 
 @keyframes rotation {
