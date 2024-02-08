@@ -92,3 +92,7 @@
 .most_read_post {
     margin-top: 40px;
 }
+
+.card_title {
+    font-weight: 500;
+}

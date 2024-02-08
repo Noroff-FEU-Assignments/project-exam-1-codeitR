@@ -8,13 +8,13 @@ export const printCards = (data) => {
       (item) => `
       <div class="post">
       <img src="${item.image}" alt="" />
-      <p class="">${item.date}</p>
+      <p class="">Publish : ${new Date(item.date).toLocaleDateString().replace(/\//g, ".")}</p>
       <p class="featuring">Feature Article</p>
-      <p class="">${item.title}</p>
+      <p class="card_title">${item.title}</p>
        <a href="/blog/index.html?id=${item.id}">
          <button class= "btn read_more">Read More...</button>
        </a>
-      <p>${trimText(item.excerpt, 100)}</p>
+      <p>${trimText(item.excerpt, 120)}</p>
       
       </div>
       `

@@ -29,6 +29,7 @@ export const fetchPostData = async () => {
         });
 };
 
+// my local data to structure templete
 export const fetchAnotherData = () => {
     return [
         {
