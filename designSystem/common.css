@@ -39,6 +39,7 @@
 .text_logo>a {
     font-size: 1.7rem;
     color: var(--text-color-p);
+    font-weight: 500;
 }
 
 ._text_logo>span {
