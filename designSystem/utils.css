@@ -1,6 +1,6 @@
 /* work on all the ebuttons on the page */
-.bi-arrow-left-square,
-.bi-arrow-right-square {
+.bi-caret-left-fill,
+.bi-caret-right-fill {
     color: var(--text-color-b);
     font-size: 1.6rem;
     background-color: var(--text-color-y);
@@ -10,8 +10,8 @@
     transition: 0.3s;
 }
 
-.bi-arrow-left-square:hover,
-.bi-arrow-right-square:hover {
+.bi-caret-left-fill:hover,
+.bi-caret-right-fill:hover {
     color: var(--text-color-b);
     background-color: var(--text-color-y);
     opacity: 0.4;
