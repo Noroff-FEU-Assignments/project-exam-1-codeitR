@@ -7,7 +7,7 @@ export const printCards = (data) => {
     .map(
       (item) => `
       <div class="post">
-      <img src="${item.image}" alt="" />
+      <img src="${item.image}" alt="" class="printCard_img" />
       <p class="">Publish : ${new Date(item.date).toLocaleDateString().replace(/\//g, ".")}</p>
       <p class="featuring">Feature Article</p>
       <p class="card_title">${item.title}</p>
