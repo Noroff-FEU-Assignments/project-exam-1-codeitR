@@ -21,11 +21,11 @@
     width: 150px;
     height: 45px;
     font-size: 16px;
-    margin-top: 1rem;
     border-radius: 4px;
     border: 2px solid #ffc84a;
     background-color: var(--bg-color-main);
     cursor: pointer;
+    text-align: center;
 }
 
 .letsStartBtn:hover {
@@ -38,6 +38,22 @@
     display: flex;
     justify-content: center;
     padding: 10px 20px;
-    margin: auto;
+    margin-bottom: 1rem;
     cursor: pointer;
+}
+
+.section_midle_blog {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+
+.back_to_blog {
+    align-items: center;
+}
+
+.section_midle_blog>a {
+    text-decoration: none;
+
 }

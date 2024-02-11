@@ -90,9 +90,12 @@ address {
     justify-content: center;
     padding: 10px 20px;
     margin: auto;
+    margin-bottom: 1rem;
     cursor: pointer;
     width: 178px
 }
+
+
 
 .about_hero-image {
     align-items: center;
