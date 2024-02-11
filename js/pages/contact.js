@@ -9,57 +9,138 @@ export function validateForm(e) {
     let subject = document.getElementById("subject");
     let message = document.getElementById("message");
     let formErrorMsg = document.getElementsByClassName("error-form");
+    let status = document.getElementById("status");
+    let errorDetector = false;
 
     let emailRegExp =
         /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let emailTestResult = emailRegExp.test(email.value);
 
+
+    function validator(selector, add, remove, msg, place, icon) {
+        selector.classList.add(add);
+        selector.classList.remove(remove);
+        place.innerHTML = msg;
+        selector.nextElementSibling.innerHTML = icon;
+    }
+
     if (name.value.trim() == "") {
-        name.classList.add("invalid");
-        formErrorMsg[0].innerHTML = "<h1>Please enter your name</h1>";
-        console.log(formErrorMsg);
-    } else if (name.value.length < 5) {
-        name.classList.add("invalid");
-        formErrorMsg[0].innerHTML = "Please enter your name, min 5 characters.";
+        errorDetector = true;
+        validator(
+            name,
+            "invalid",
+            "valid",
+            "<h3>Please enter your name</h3>",
+            formErrorMsg[0],
+            "<i class='bi bi-x'></i>"
+        );
+    } else if (name.value.length < 3) {
+        errorDetector = true;
+        validator(
+            name,
+            "invalid",
+            "valid",
+            "<h3>Please enter your name, min 3 characters.</h3>",
+            formErrorMsg[0],
+            "<i class='bi bi-x'></i>"
+        );
     } else {
-        name.classList.remove("invalid");
-        name.classList.add("valid");
-        formErrorMsg[0].innerHTML = "";
+        errorDetector = false;
+        validator(
+            name,
+            "valid",
+            "invalid",
+            "",
+            formErrorMsg[0],
+            "<i class='bi bi-check-lg'></i>"
+        );
     }
 
     if (email.value.trim() == "") {
-        email.classList.add("invalid");
-        formErrorMsg[1].innerHTML = "Please enter email adress";
+        errorDetector = true;
+        validator(
+            email,
+            "invalid",
+            "valid",
+            "<h3>Please enter email adress</h3>",
+            formErrorMsg[1],
+            "<i class='bi bi-x'></i>"
+        );
     } else if (!emailTestResult) {
-        email.classList.add("invalid");
-        formErrorMsg[1].innerHTML = "Please enter valid email adress.";
+        errorDetector = true;
+        validator(
+            email,
+            "invalid",
+            "valid",
+            "<h3>Please enter valid email adress.</h3>",
+            formErrorMsg[1],
+            "<i class='bi bi-x'></i>"
+        );
     } else {
-        email.classList.remove("invalid");
-        email.classList.add("valid");
-        formErrorMsg[1].innerHTML = "";
+        errorDetector = false;
+        validator(
+            email,
+            "valid",
+            "invalid",
+            "",
+            formErrorMsg[1],
+            "<i class='bi bi-check-lg'></i>"
+        );
     }
 
     if (subject.value.trim() == "") {
-        subject.classList.add("invalid");
-        formErrorMsg[2].innerHTML = "Please enter subject of your message.";
-    } else if (subject.value.length < 15) {
-        subject.classList.add("invalid");
-        formErrorMsg[2].innerHTML = "Please enter subject, min 15 characters.";
+        errorDetector = true;
+        validator(
+            subject,
+            "invalid",
+            "valid",
+            "<h3>Please enter subject of your message.</h3>",
+            formErrorMsg[2],
+            "<i class='bi bi-x'></i>"
+        );
+    } else if (subject.value.length < 5) {
+        errorDetector = true;
+        validator(
+            subject,
+            "invalid",
+            "valid",
+            "<h3>Please enter subject, min 5 characters.</h3>",
+            formErrorMsg[2],
+            "<i class='bi bi-x'></i>"
+        );
     } else {
-        subject.classList.remove("invalid");
-        subject.classList.add("valid");
-        formErrorMsg[2].innerHTML = "";
+        errorDetector = false;
+        validator(
+            subject,
+            "valid",
+            "invalid",
+            "",
+            formErrorMsg[2],
+            "<i class='bi bi-check-lg'></i>"
+        );
     }
 
     if (message.value.trim() == "") {
+        errorDetector = true;
         message.classList.add("invalid");
         formErrorMsg[3].innerHTML = "Please write your message.";
-    } else if (message.value.length < 25) {
+    } else if (message.value.length < 10) {
+        errorDetector = true;
         message.classList.add("invalid");
         formErrorMsg[3].innerHTML = "Please write your message, min 25 characters.";
     } else {
+        errorDetector = false;
         message.classList.remove("invalid");
         message.classList.add("valid");
         formErrorMsg[3].innerHTML = "";
+    }
+
+    if (errorDetector) {
+        status.innerHTML = "Please fill out the form correctly!";
+    } else {
+        status.innerHTML = "Email Sent Successfully";
+        setTimeout(() => {
+            location.reload();
+        }, 2000);
     }
 }

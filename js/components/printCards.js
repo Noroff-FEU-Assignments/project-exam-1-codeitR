@@ -26,10 +26,9 @@ export const blogTemplate = (data) => {
   <div class="blog_body">
     <h1>${data.title}</h1>
     <span class="attribute_section">
-    <img class="xxm_post_image" src=${data.image} alt="">
     <span class="attribute_section_auth">
     <p>Author: ${data.author}</p>
-    <p>date: ${data.date}</p> 
+    <p>Date: ${new Date(data.date).toLocaleDateString().replace(/\//g, ".")}</p> 
     </span></span>
     <img class="post_image" src=${data.image} alt="">
     <h3>Introduction</h3>

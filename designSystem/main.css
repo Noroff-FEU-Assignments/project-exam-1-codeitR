@@ -9,30 +9,15 @@
 
 .blog_body {
     margin: 40px auto;
+    max-width: 700px;
 }
 
 .content {
     margin: 0 auto;
 }
 
-.blog_body {
-    margin: 40px auto;
-}
 
 
-.attribute_section {
-    display: flex;
-    align-items: center;
-}
-
-.xxm_post_image {
-    margin-right: 8px;
-    width: 5%;
-    height: 5%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid pink;
-}
 
 /* lightbox */
 .post_image {
@@ -44,10 +29,7 @@
     margin-bottom: 20px;
 }
 
-.blog_body {
-    margin: 40px auto;
-    max-width: 700px;
-}
+
 
 .content {
     margin: 0 auto;

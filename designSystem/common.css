@@ -14,6 +14,7 @@
 
 .navbar a:hover {
     text-decoration: underline;
+    color: var(--text-color-y);
 }
 
 .navbar__icons {
@@ -32,13 +33,13 @@
 
 ._text_logo {
     font-size: 1.7rem;
-    color: var(--text-color-p);
+    color: var(--text-color-p) !important;
 
 }
 
 .text_logo>a {
     font-size: 1.7rem;
-    color: var(--text-color-p);
+    color: var(--text-color-p) !important;
     font-weight: 500;
 }
 
@@ -56,14 +57,16 @@
 
 footer {
     background-color: #ffc84a;
-    margin: 40px 0px 0px;
-    padding: 20px 0px 20px 0px;
+    bottom: 0;
+
 }
 
 .footer__navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 0 20px 0;
+
 }
 
 .nav-items>a {
