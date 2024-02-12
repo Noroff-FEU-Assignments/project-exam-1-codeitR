@@ -28,6 +28,13 @@
     text-align: center;
 }
 
+.btn:hover {
+    border: 2px solid var(--text-color-b);
+    color: #ffc84a;
+    transform: 0.5ms;
+
+}
+
 .letsStartBtn:hover {
     border: 2px solid var(--text-color-b);
     color: #ffc84a;

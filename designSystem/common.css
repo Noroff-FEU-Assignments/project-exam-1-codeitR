@@ -79,6 +79,10 @@ address {
     text-transform: none;
 }
 
+.socials {
+    color: var(--text-color-b);
+}
+
 .socials-copyright {
     display: flex;
     flex-direction: column;
