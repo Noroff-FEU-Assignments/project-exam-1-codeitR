@@ -13,5 +13,5 @@
 import { setupMenuToggle } from '../js/components/toggle.js'
 setupMenuToggle()
 
-import { validateForm } from '../js/pages/contact.js'
-validateForm()
+// import { validateForm } from '../js/pages/contact.js'
+// validateForm()
