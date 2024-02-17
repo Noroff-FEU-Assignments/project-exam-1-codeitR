@@ -1,13 +1,10 @@
 /* common nabbar css */
 
 .main_logo>a {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     color: var(--text-color-p) !important;
-
-}
-
-.main_logo>a:hover {
-    text-decoration: none;
+    font-weight: 600;
+    text-decoration: none !important;
 }
 
 .main_logo>a>span {
@@ -75,7 +72,7 @@ footer {
 .nav-items>a {
     text-decoration: none;
     padding: 5px;
-    color: var(--text-color-1);
+    color: var(--text-color-b);
     font-size: 1.0rem;
 }
 
