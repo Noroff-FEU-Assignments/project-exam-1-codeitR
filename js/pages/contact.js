@@ -30,7 +30,7 @@ export function validateForm(e) {
             name,
             "invalid",
             "valid",
-            "<h3>Please enter your name</h3>",
+            "<h4>Please enter your name</h4>",
             formErrorMsg[0],
             "<i class='bi bi-x'></i>"
         );
@@ -40,7 +40,7 @@ export function validateForm(e) {
             name,
             "invalid",
             "valid",
-            "<h3>Please enter your name, min 3 characters.</h3>",
+            "<h4>Please enter your name, min 3 characters.</h4>",
             formErrorMsg[0],
             "<i class='bi bi-x'></i>"
         );
@@ -72,7 +72,7 @@ export function validateForm(e) {
             email,
             "invalid",
             "valid",
-            "<h3>Please enter valid email adress.</h3>",
+            "<h4>Please enter valid email adress.</h4>",
             formErrorMsg[1],
             "<i class='bi bi-x'></i>"
         );
@@ -94,7 +94,7 @@ export function validateForm(e) {
             subject,
             "invalid",
             "valid",
-            "<h3>Please enter subject of your message.</h3>",
+            "<h4>Please enter subject of your message.</h4>",
             formErrorMsg[2],
             "<i class='bi bi-x'></i>"
         );
@@ -104,7 +104,7 @@ export function validateForm(e) {
             subject,
             "invalid",
             "valid",
-            "<h3>Please enter subject, min 5 characters.</h3>",
+            "<h4>Please enter subject, min 5 characters.</h4>",
             formErrorMsg[2],
             "<i class='bi bi-x'></i>"
         );
@@ -141,6 +141,6 @@ export function validateForm(e) {
         status.innerHTML = "Email Sent Successfully";
         setTimeout(() => {
             location.reload();
-        }, 2000);
+        }, 2500);
     }
 }
