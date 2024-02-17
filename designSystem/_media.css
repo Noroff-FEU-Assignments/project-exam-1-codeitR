@@ -28,6 +28,7 @@
 }
 
 @media (max-width: 799px) {
+
     .section__two {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -39,7 +40,8 @@
     }
 
     .hero_left>h1 {
-        font-size: 30px;
+        font-size: 2.5rem;
+
     }
 
     .hero-image {
@@ -74,7 +76,7 @@
     }
 
     .options a {
-        color: white;
+        color: var(--bg-color-main);
     }
 
     .navbar__icons {

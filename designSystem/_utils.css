@@ -22,7 +22,7 @@
     height: 45px;
     font-size: 16px;
     border-radius: 4px;
-    border: 2px solid #ffc84a;
+    border: 2px solid var(--text-color-y);
     background-color: var(--bg-color-main);
     cursor: pointer;
     text-align: center;
@@ -30,23 +30,29 @@
 
 .btn:hover {
     border: 2px solid var(--text-color-b);
-    color: #ffc84a;
+    color: var(--text-color-y);
     transform: 0.5ms;
 
 }
 
 .letsStartBtn:hover {
     border: 2px solid var(--text-color-b);
-    color: #ffc84a;
+    color: var(--text-color-y);
     transform: 0.5ms;
 }
 
 .load-more-btn {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px 20px;
     margin-bottom: 1rem;
     cursor: pointer;
+}
+
+.go_up {
+    width: 80px !important;
+    height: 30px !important;
 }
 
 .section_midle_blog {

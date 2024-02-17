@@ -55,6 +55,6 @@
     max-width: 90%;
     max-height: 80%;
     padding: 4px;
-    background-color: red;
+    background-color: var(--text-color-b);
     /* border: 2px solid white; */
 }

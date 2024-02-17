@@ -1,14 +1,31 @@
 /* common nabbar css */
 
 .main_logo>a {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--text-color-p) !important;
     font-weight: 600;
     text-decoration: none !important;
 }
 
-.main_logo>a>span {
-    color: var(--text-color-b);
+.about_hero {
+    color: var(--text-color-p);
+    font-size: 1.6rem;
+}
+
+.hero_about {
+    display: flex;
+    align-items: center;
+}
+
+.main_about {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.main_logo>a>span,
+.about_hero>span {
+    color: var(--text-color-y);
 }
 
 .navbar {
