@@ -41,6 +41,10 @@
     transform: 0.5ms;
 }
 
+.StartExploring {
+    margin-top: 2rem;
+}
+
 .load-more-btn {
     display: flex;
     justify-content: center;

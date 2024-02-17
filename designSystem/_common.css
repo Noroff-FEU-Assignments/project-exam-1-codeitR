@@ -1,7 +1,8 @@
 /* common nabbar css */
 
 .main_logo>a {
-    font-size: 3rem;
+    font-size: 1.6rem !important;
+    font-family: "Roboto", sans-serif;
     color: var(--text-color-p) !important;
     font-weight: 600;
     text-decoration: none !important;
