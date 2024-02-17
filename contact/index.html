@@ -81,13 +81,19 @@
                     </div>
                     <div>
                         <label for="message">Message</label>
+                        <!-- <input type="text" name="message" id="message"
+                            placeholder="Please write your message, min 25 characters.."
+                            class="contact-input contact-textarea" /> -->
+
                         <textarea name="message" id="message"
                             placeholder="Please write your message, min 25 characters.."
                             class="contact-input contact-textarea"></textarea>
+                        <i class="bi bi-exclamation-circle failure-icon"></i>
+                        <i class="bi bi-check-circle success-icon"></i>
+                        <div class=""></div>
                         <div class="error-form"></div>
                     </div>
-
-                    <button type="submit" id="submit">Submit</button>
+                    <button type="submit" id="submit" class="btn form_submit">Submit</button>
                 </div>
                 <div id="status"></div>
             </form>

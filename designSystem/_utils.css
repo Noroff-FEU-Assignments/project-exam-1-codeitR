@@ -18,8 +18,9 @@
 }
 
 .btn {
-    width: 150px;
-    height: 45px;
+
+    width: 140px;
+    height: 40px;
     font-size: 16px;
     border-radius: 4px;
     border: 2px solid var(--text-color-y);
@@ -67,8 +68,13 @@
 }
 
 .back_to_blog {
+    display: flex;
     align-items: center;
+    color: var(--text-color-b);
+    justify-content: center;
+    margin: 0 auto;
 }
+
 
 .section_midle_blog>a {
     text-decoration: none;

@@ -141,6 +141,6 @@ export function validateForm(e) {
         status.innerHTML = "Email Sent Successfully";
         setTimeout(() => {
             location.reload();
-        }, 2500);
+        }, 1500);
     }
 }
