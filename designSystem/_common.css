@@ -19,7 +19,7 @@
 }
 
 .main_about {
-    margin-top: 3rem;
+    margin-top: 4rem !important;
     margin-bottom: 3rem;
     gap: 1rem;
 }
