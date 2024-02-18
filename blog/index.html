@@ -10,7 +10,7 @@
         content="This is teach blog post site. Main purpose of this blog post is to make understand
     new developer on new teach treands and ideas through the post.This is blog post page of the site. Where the contents of blog is wrtten ">
     <link rel="stylesheet" href="../designSystem/style.css">
-    <script defer type="module" src="../js/components/lightbox.js"></script>
+    <script type="module" src="../js/components/lightbox.js"></script>
     <script type="module" src="../js/index.js"></script>
     <script type="module" src="../js/pages/blog.js"></script>
     <!-- Hotjar Tracking Code for dreams&ideas -->
@@ -48,13 +48,13 @@
     </header>
 
     <main>
-        <section class="blog container">
-            <section class="container singular-blog" id="print_blog_post"></section>
-        </section>
-        <section class="section_midle_blog container">
-            <div class="Loader"></div>
+        <div class="blog container">
+            <div class="container singular-blog" id="print_blog_post"></div>
+        </div>
+        <div class="Loader"></div>
+        <div class="section_midle_blog container">
             <a href="../blogs/index.html" class="back_to_blog btn">Back To Blogs</a>
-        </section>
+        </div>
     </main>
     <footer class="blogs_footer">
         <div class="footer container">
@@ -87,7 +87,6 @@
                 </div>
             </div>
         </div>
-        </section>
     </footer>
 </body>
 
