@@ -154,7 +154,7 @@ address {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     animation: rotation 1s linear infinite;
     margin: 500px;
 }
