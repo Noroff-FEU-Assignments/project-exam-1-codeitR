@@ -4,17 +4,17 @@ form.addEventListener("submit", validateForm);
 export function validateForm(e) {
     e.preventDefault();
 
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const subject = document.getElementById("subject");
-    const message = document.getElementById("message");
-    const formErrorMsg = document.getElementsByClassName("error-form");
-    const status = document.getElementById("status");
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let subject = document.getElementById("subject");
+    let message = document.getElementById("message");
+    let formErrorMsg = document.getElementsByClassName("error-form");
+    let status = document.getElementById("status");
+    let errorDetector = false;
 
-
-    const emailRegExp =
+    let emailRegExp =
         /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const emailTestResult = emailRegExp.test(email.value);
+    let emailTestResult = emailRegExp.test(email.value);
 
 
     function validator(selector, add, remove, msg, place, icon) {
@@ -23,9 +23,8 @@ export function validateForm(e) {
         place.innerHTML = msg;
         selector.nextElementSibling.innerHTML = icon;
     }
-    let errorDetector = false;
 
-    if (name.value.trim() === "") {
+    if (name.value.trim() == "") {
         errorDetector = true;
         validator(
             name,
@@ -46,6 +45,7 @@ export function validateForm(e) {
             "<i class='bi bi-x'></i>"
         );
     } else {
+        errorDetector = false;
         validator(
             name,
             "valid",
@@ -56,7 +56,7 @@ export function validateForm(e) {
         );
     }
 
-    if (email.value.trim() === "") {
+    if (email.value.trim() == "") {
         errorDetector = true;
         validator(
             email,
@@ -77,6 +77,7 @@ export function validateForm(e) {
             "<i class='bi bi-x'></i>"
         );
     } else {
+        errorDetector = false;
         validator(
             email,
             "valid",
@@ -87,7 +88,7 @@ export function validateForm(e) {
         );
     }
 
-    if (subject.value.trim() === "") {
+    if (subject.value.trim() == "") {
         errorDetector = true;
         validator(
             subject,
@@ -108,6 +109,7 @@ export function validateForm(e) {
             "<i class='bi bi-x'></i>"
         );
     } else {
+        errorDetector = false;
         validator(
             subject,
             "valid",
@@ -118,35 +120,19 @@ export function validateForm(e) {
         );
     }
 
-    if (message.value.trim() === "") {
+    if (message.value.trim() == "") {
         errorDetector = true;
-        validator(
-            message,
-            "invalid",
-            "valid",
-            "<h4>Please write your message.</h4>",
-            formErrorMsg[3],
-            "<i class='bi bi-x'></i>"
-        );
-    } else if (message.value.length < 25) {
+        message.classList.add("invalid");
+        formErrorMsg[3].innerHTML = "Please write your message.";
+    } else if (message.value.length < 10) {
         errorDetector = true;
-        validator(
-            message,
-            "invalid",
-            "valid",
-            "<h4>Please write your message, min 25 characters.</h4>",
-            formErrorMsg[3],
-            "<i class='bi bi-x'></i>"
-        );
+        message.classList.add("invalid");
+        formErrorMsg[3].innerHTML = "Please write your message, min 25 characters.";
     } else {
-        validator(
-            message,
-            "valid",
-            "invalid",
-            "",
-            formErrorMsg[3],
-            "<i class='bi bi-check-lg'></i>"
-        );
+        errorDetector = false;
+        message.classList.remove("invalid");
+        message.classList.add("valid");
+        formErrorMsg[3].innerHTML = "";
     }
 
     if (errorDetector) {
