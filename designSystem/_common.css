@@ -144,6 +144,8 @@ address {
     cursor: pointer;
 }
 
+/* this is laxy loader  */
+
 .loader {
     width: 48px;
     height: 48px;
@@ -152,9 +154,9 @@ address {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     animation: rotation 1s linear infinite;
-    margin: 450px auto;
+    margin: 500px;
 }
 
 @keyframes rotation {
