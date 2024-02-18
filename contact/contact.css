@@ -1,29 +1,25 @@
 .contact_container {
     display: flex;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex: 1;
     width: 50%;
 }
 
 .image_contact {
     background-image: url("../assets/5124556.jpg");
-    height: 100%;
+    background-size: cover;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
-/* style rules for content section*/
-
-.error-form {
-    color: red;
-}
 
 /*style rules for form section*/
 
@@ -31,9 +27,8 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     padding: 10px;
-
 }
 
 .title {
@@ -49,21 +44,21 @@ form div input,
     height: 40px;
     border-radius: 4px;
     outline: none;
-    border: 2px solid var(--bg-text-y);
-    padding: 0 30px;
+    border: 1px solid var(--bg-text-y);
+    padding: 0 20px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact-input {
     height: 20vh;
-    width: 108%;
+    width: 104%;
     padding: 0 8px !important;
 
 }
 
 label {
     display: block;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
 }
 
 form div {
@@ -76,11 +71,10 @@ input:focus {
 
 }
 
+
 .social {
-    margin-right: 40px;
+    margin-right: 30px;
 }
-
-
 
 form div i {
     position: absolute;
@@ -95,11 +89,7 @@ form div i {
 
 .failure-icon,
 .error {
-    color: red;
-}
-
-.success-icon {
-    color: green;
+    color: rgb(23, 23, 23);
 }
 
 .error-form {
@@ -115,10 +105,6 @@ form div i {
     margin: 0 auto;
 }
 
-i {
-    z-index: 10;
-}
-
 input+div {
     position: absolute;
     right: 40px;
@@ -126,48 +112,33 @@ input+div {
     height: 30px;
 }
 
-input+div>i {
-    font-size: 16px;
-    font-weight: bold;
-
-}
-
-.bi-x,
-.bi-check-lg {
-    color: red;
-    margin: 1.0rem;
-    padding: .4rem;
-}
-
-.bi-check-lg {
+.bi-check-lg,
+.success-icon {
     color: green !important;
 }
 
 
-
 .valid {
-    border: 2px solid green;
+    border: 1px solid green;
 }
 
 .invalid {
-    border: 2px solid red;
+    border: 1px solid red;
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 799px) {
     .contact_container {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
     }
 
     #form,
     .content {
         width: 90%;
+
     }
 }
 
-@media (max-width: 450px) {
-    #form {
-        padding: 20px;
-    }
-}
+
+@media (max-width: 600px) {}

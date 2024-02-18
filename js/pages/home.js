@@ -18,7 +18,7 @@ let data = [];
 const firstFetch = async () => {
     data = await fetchPostData();
 
-    console.log(data);
+    // console.log(data);
     // run this so it can do the setup for the first time for buttons and cards setup
     handleResize();
 };
@@ -77,7 +77,7 @@ const handleResize = () => {
     if (window.innerWidth <= 799) {
         start = 0;
         end = data.length;
-        console.log("mobile", window.innerWidth);
+        // console.log("mobile", window.innerWidth);
         prev.style.display = "none";
         next.style.display = "none";
         printData();
@@ -87,7 +87,7 @@ const handleResize = () => {
         cardsToDisplayAtATime = 2;
         printData();
     } else {
-        console.log("desktop", window.innerWidth);
+        // console.log("desktop", window.innerWidth);
         prev.style.display = "flex";
         next.style.display = "flex";
         start = 0;

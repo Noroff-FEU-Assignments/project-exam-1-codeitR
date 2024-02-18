@@ -45,7 +45,7 @@
 
 .navbar a:hover {
     text-decoration: underline;
-    color: var(--text-color-y);
+    color: var(--text-color-p);
 }
 
 .navbar__icons {
@@ -55,7 +55,8 @@
 .options {
     display: flex;
     gap: 20px;
-    text-transform: capitalize;
+
+
 }
 
 .hide {
