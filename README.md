@@ -12,7 +12,7 @@
 ![image](https://img.shields.io/badge/Code-JavaScript-%23F7DF1E?style=flat-square&logo=javascript)
 ![image](https://img.shields.io/badge/Code-CSS3-%231572B6?style=flat-square&logo=css3)
 ![image](https://img.shields.io/badge/Tool-Netlify-%2338B2AC?style=flat-square&logo=netlify)
-![image](<https://img.shields.io/badge/Tool-> WP Rest API-%2338B2AC?style=flat-square&logo=API)
+![image](https://img.shields.io/badge/Tool-RestAPI-%2338B2AC?style=flat-square&logo=API)
 
 ## Getting Started
 
