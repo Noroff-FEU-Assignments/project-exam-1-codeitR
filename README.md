@@ -19,7 +19,7 @@
 1. [Clone the repo](https://github.com/Noroff-FEU-Assignments/project-exam-1-codeitR)
 2. [Visit the website](https://dreamandideas.netlify.app/)
 
-## Contributing && Contact 😊
+## For Contribution Or Contact 😊
 
 Any kind of contributation to eleveate present code is more than welcome, Open a pull request, or contact so we can reviewed together.
 
