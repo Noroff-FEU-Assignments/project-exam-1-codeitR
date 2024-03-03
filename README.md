@@ -55,7 +55,7 @@ git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-codeitR.git
    [Netlify](https://dreamandideas.netlify.app/)
 
 3. Link to the design:
-   [Link to the Figma Prototype](https://www.figma.com/proto/iMFKnmOkAlgL7aNHLlKeT0/ramesh_project?node-id=7-5&starting-point-node-id=7%3A5)
+   [Link to the Figma Prototype](https://www.figma.com/proto/T2DRjS9JvrlyCI75S3woCM/projectExam1?type=design&node-id=1-2&t=a0uQMStVdywp4Z9x-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=90%3A84)
 
 ## For Contribution Or Contact 😊
 
